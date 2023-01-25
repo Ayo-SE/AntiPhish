@@ -63,14 +63,15 @@ const paragraphs = document.querySelectorAll('p');
                 let twoPhrase = []
 
                 for (let j = 0; j < phrases.length; j++) {
-                    if (phrases.length % 2 != 0 && j == phrases.length - 1) {
+                    if (j >= phrases.length - 1) {
                         break;
                     } 
                     
-                    let tempWord = phrases[i] + " " + phrases[i + 1]
+                    let tempWord = phrases[j] + " " + phrases[j + 1]
+                    //console.log(tempWord)
                     twoPhrase.push(tempWord)
                 }
-
+                //console.log(twoPhrase)
                 for (const phrase of twoPhrase) {
                     if (flagged_2.includes(phrase.toLowerCase())) {
                         console.log('Found suspicious word: ' + phrase)
@@ -85,14 +86,15 @@ const paragraphs = document.querySelectorAll('p');
                 let threePhrase = []
 
                 for (let j = 0; j < phrases.length; j++) {
-                    if (phrases.length % 3 != 0 && j == phrases.length - 2) {
+                    if (j >= phrases.length - 2) {
                         break;
                     } 
                     
-                    let tempWord = phrases[i] + " " + phrases[i + 1] + " " + phrases[i + 2]
+                    let tempWord = phrases[j] + " " + phrases[j + 1] + " " + phrases[j + 2]
+                    //console.log(tempWord)
                     threePhrase.push(tempWord)
                 }
-
+                //console.log(threePhrase)
                 for (const phrase of threePhrase) {
                     if (flagged_3.includes(phrase.toLowerCase())) {
                         console.log('Found suspicious word: ' + phrase)
@@ -106,14 +108,15 @@ const paragraphs = document.querySelectorAll('p');
                 let fourPhrase = []
 
                 for (let j = 0; j < phrases.length; j++) {
-                    if (phrases.length % 4 != 0 && j == phrases.length - 2) {
+                    if (j >= phrases.length - 3) {
                         break;
                     } 
                     
-                    let tempWord = phrases[i] + " " + phrases[i + 1] + " " + phrases[i + 2] + " " + phrases[i + 3]
+                    let tempWord = phrases[j] + " " + phrases[j + 1] + " " + phrases[j + 2] + " " + phrases[j + 3]
+                    //console.log(tempWord)
                     fourPhrase.push(tempWord)
                 }
-
+                //console.log(fourPhrase)
                 for (const phrase of fourPhrase) {
                     if (flagged_4.includes(phrase.toLowerCase())) {
                         console.log('Found suspicious word: ' + phrase)
@@ -127,23 +130,24 @@ const paragraphs = document.querySelectorAll('p');
                 let fivePhrase = []
 
                 for (let j = 0; j < phrases.length; j++) {
-                    if (phrases.length % 4 != 0 && j == phrases.length - 2) {
+                    if (j >= phrases.length - 4) {
                         break;
                     } 
                     
-                    let tempWord = phrases[i] + " " + phrases[i + 1] + " " + phrases[i + 2] + " " + phrases[i + 3] + " " + phrases[i + 4]
+                    let tempWord = phrases[j] + " " + phrases[j + 1] + " " + phrases[j + 2] + " " + phrases[j + 3] + " " + phrases[j + 4]
+                    //console.log(tempWord)
                     fivePhrase.push(tempWord)
                 }
-
+                //console.log(fivePhrase)
                 for (const phrase of fivePhrase) {
                     if (flagged_5.includes(phrase.toLowerCase())) {
                         console.log('Found suspicious word: ' + phrase)
-                    }
+                    }   
                 }
             }
 
             if (i == 6) {
-                console.log('Nothing else was found')
+                console.log('End of loop')
             }
         }
     //}
